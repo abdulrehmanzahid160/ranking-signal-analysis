@@ -1,0 +1,13 @@
+attribute,value,improved_count,worsened_count,log_odds_z_improved
+competition_level,LOW,21990,20794,31.8065387598176
+main_intent,informational,17501,15581,28.713423634685395
+content_type,comparison article,378,147,9.805936369314383
+competition_level,missing,528,453,2.43720640304013
+main_intent,missing,414,374,1.445699436292126
+main_intent,navigational,37,67,-2.9019683394356908
+content_type,feedly article,98,160,-3.838621884538825
+main_intent,commercial,4154,4528,-4.809300770256102
+competition_level,HIGH,2183,2704,-8.200415642949462
+competition_level,MEDIUM,1466,2216,-13.18619662614911
+main_intent,transactional,4061,5617,-19.28735776504131
+content_type,keyword article,25691,25860,-50.508067136150146

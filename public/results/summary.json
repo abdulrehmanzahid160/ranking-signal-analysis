@@ -1,0 +1,30 @@
+{
+  "rows": 130833,
+  "clients": 48,
+  "feature_window_days": 90,
+  "outcome_window_days": 28,
+  "median_position_change": 0.034,
+  "archetypes": [
+    {
+      "name": "CTR opportunity",
+      "reason_code": "CTR-GAP-LOW",
+      "count": 13165,
+      "share_pct": 10.1,
+      "median_position_change": 0.23
+    },
+    {
+      "name": "Volatile visibility",
+      "reason_code": "POS-VOL-HIGH",
+      "count": 13084,
+      "share_pct": 10.0,
+      "median_position_change": 3.29
+    },
+    {
+      "name": "Deteriorating trend",
+      "reason_code": "POS-TREND-DOWN",
+      "count": 13084,
+      "share_pct": 10.0,
+      "median_position_change": 0.25
+    }
+  ]
+}

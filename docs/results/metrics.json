@@ -1,0 +1,75 @@
+{
+  "rows": 130833,
+  "train_rows": 120612,
+  "test_rows": 10221,
+  "train_clients": 39,
+  "test_clients": 9,
+  "feature_cutoff": "2026-05-31",
+  "target_start": "2026-06-01",
+  "target_end": "2026-06-28",
+  "metrics": {
+    "baseline": {
+      "r2": -0.049131612765582755,
+      "rmse": 10.098785757223997,
+      "spearman": -0.0964843057831924
+    },
+    "ridge": {
+      "r2": -0.004792692816643518,
+      "rmse": 9.883082168795072,
+      "spearman": 0.1652579319313056
+    },
+    "random_forest": {
+      "r2": -0.07451745105034946,
+      "rmse": 10.22023563047264,
+      "spearman": 0.1173919831750979
+    },
+    "permutation_importance": {
+      "avg_position_28d": 0.06280154675359184,
+      "position_volatility_90d": 0.02039839241800105,
+      "position_trend_slope_90d": -0.013190782023263884,
+      "history_impressions_90d": -0.010451484393169785,
+      "history_ctr_90d": -0.006058900337723827,
+      "history_ctr_28d": 0.002733676210646685,
+      "ctr_gap": 0.0008439972089608894,
+      "keyword_char_count": -0.0010070529275262678,
+      "keyword_token_count": -0.0009218974221751886,
+      "url_char_count": -0.0032554043394908603,
+      "search_volume": 0.0004427541864822082,
+      "competition": 0.0013560329458031095,
+      "cpc": 0.0004423225477385717,
+      "backlinks": 0.0004315123010779261,
+      "category_count": 0.002561230475293034,
+      "char_count": 0.007367633730697376,
+      "word_count": -0.02653928317061401,
+      "client_tenure_days": 0.004161187462624616,
+      "content_type": -0.0003120125862716705,
+      "competition_level": -0.0008125502384105735,
+      "main_intent": -7.478492351742361e-05,
+      "is_published": 0.0,
+      "is_deleted": 0.0
+    }
+  },
+  "ridge_coefficient_rank_stability_spearman": 0.6241405653170359,
+  "earlier_window_metrics": {
+    "baseline": {
+      "r2": 0.05893553566599874,
+      "rmse": 8.892979099345867,
+      "spearman": 0.22384196079821939
+    },
+    "ridge": {
+      "r2": 0.06774803125604212,
+      "rmse": 8.851242493374444,
+      "spearman": 0.2173549821928672
+    }
+  },
+  "leakage_audit": {
+    "status": "pass",
+    "feature_window_ends_before_target": true,
+    "excluded_shared_window_query_features": [
+      "query_impression_entropy_90d",
+      "visible_query_click_momentum",
+      "visible_query_impression_momentum"
+    ],
+    "reason": "The fixed query snapshot ends after the outcome starts, so it is descriptive only."
+  }
+}

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Data and research export artifacts
+*.parquet
+*.csv
+*.tsv
+*.pkl
+*.joblib
+*.db
+*.duckdb
+
+# Public, aggregate-only evidence used by the paper
+!docs/results/*.csv
+!public/results/*.csv
+
+# Private/generated data (public aggregate results live under docs/results)
+outputs/
+outputs/data/
+outputs/*.parquet
+outputs/*.csv
+work/data/
+work/raw/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Next.js and Vercel
+node_modules/
+.next/
+.vercel/
+.env*
+
+# Keep notebooks and code tracked; ignore generated outputs only
