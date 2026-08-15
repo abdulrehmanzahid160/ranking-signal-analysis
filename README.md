@@ -1,10 +1,10 @@
 # Ranking Signal Analysis
 
-An observational FlyRank ML Internship capstone about content and search measures associated with subsequent organic position movement. The repository contains a reproducible analysis and a single-page research paper built with Next.js 16, TypeScript, and Tailwind CSS v4.
+An observational FlyRank ML Internship capstone about content and search measures associated with subsequent organic position movement. The repository contains a reproducible analysis and a multi-page research paper built with Next.js 16, TypeScript, and Tailwind CSS v4.
 
 ## Paper site
 
-The `/` route is a Server Component with no data fetching, API routes, browser state, trackers, or runtime chart libraries. Next.js prerenders it during the default Vercel build. Figures under `public/figures/` are analysis exports rendered through `next/image`.
+The `/` route contains the title, abstract, and linked table of contents. The remaining eight paper sections have dedicated routes with previous/next navigation. Every route is a Server Component with no data fetching, API routes, browser state, trackers, or runtime chart libraries. Next.js prerenders the complete publication during the default Vercel build. Figures under `public/figures/` are analysis exports rendered through `next/image`.
 
 ```powershell
 npm install
