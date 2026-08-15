@@ -32,6 +32,21 @@ body {
 
 main { width: calc(100% - 2.5rem); max-width: 70rem; margin: 0 auto; }
 
+.site-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid var(--color-rule);
+  background: var(--color-paper);
+}
+
+.site-header-inner { width: calc(100% - 2.5rem); max-width: 70rem; margin: 0 auto; }
+.site-title { display: block; padding: .8rem 0 .65rem; color: var(--color-ink); font-family: var(--font-heading), Arial, sans-serif; font-size: .74rem; font-weight: 600; letter-spacing: .09em; text-decoration: none; text-transform: uppercase; }
+.site-header nav { display: flex; gap: 1.2rem; padding: 0 0 .7rem; overflow-x: auto; scrollbar-width: thin; white-space: nowrap; }
+.site-header nav a { color: var(--color-muted); font-family: var(--font-heading), Arial, sans-serif; font-size: .64rem; text-decoration: none; }
+.site-header nav a:hover { color: var(--color-accent); }
+.site-header nav a span { margin-right: .25rem; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+
 a {
   color: var(--color-accent);
   text-decoration-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
@@ -107,6 +122,16 @@ p { margin: 0 0 1.35rem; }
 .abstract-copy { padding-top: 1.6rem; border-top: 1px solid var(--color-ink); }
 .abstract-copy p, .opening { font-size: 1.2rem; line-height: 1.45; }
 
+.section-directory { margin-top: 4.5rem; }
+.section-directory > p { margin: 0 0 .75rem; font-family: var(--font-heading), Arial, sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.section-directory ol { margin: 0; padding: 0; border-top: 1px solid var(--color-ink); list-style: none; }
+.section-directory li { border-bottom: 1px solid var(--color-rule); }
+.section-directory a { display: grid; grid-template-columns: 2.2rem 8.5rem 1fr; gap: .8rem; align-items: baseline; padding: .85rem 0; color: var(--color-ink); text-decoration: none; }
+.section-directory a:hover strong { color: var(--color-accent); }
+.section-directory span { color: var(--color-accent); font-family: var(--font-heading), Arial, sans-serif; font-size: .68rem; }
+.section-directory strong { font-family: var(--font-heading), Arial, sans-serif; font-size: .76rem; font-weight: 500; }
+.section-directory small { color: var(--color-muted); font-size: .82rem; }
+
 .source-note {
   white-space: nowrap;
   font-family: var(--font-heading), Arial, sans-serif;
@@ -148,11 +173,24 @@ th { border-bottom: 1px solid var(--color-ink); font-weight: 600; }
 code { font-family: "SFMono-Regular", Consolas, monospace; font-size: .82em; }
 pre { margin: 2rem 0; padding: 1.2rem 0; overflow-x: auto; border-block: 1px solid var(--color-rule); color: #292722; font-size: .72rem; line-height: 1.55; }
 
+.page-navigation { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--color-ink); }
+.page-navigation > div { min-height: 7rem; }
+.page-navigation > div:last-child { text-align: right; }
+.page-navigation a { display: block; height: 100%; padding: 1.5rem 0 2.5rem; color: var(--color-ink); font-size: 1.05rem; text-decoration: none; }
+.page-navigation a:hover { color: var(--color-accent); }
+.page-navigation a span { display: block; margin-bottom: .3rem; color: var(--color-muted); font-family: var(--font-heading), Arial, sans-serif; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
+
 @media (max-width: 760px) {
   body { font-size: 18px; }
   main { width: calc(100% - 1.6rem); max-width: 70rem; }
   .paper-section { width: 100%; grid-template-columns: minmax(0, 1fr); gap: 1.4rem; padding: 4.5rem 0; }
   .section-copy, .subtitle, .abstract-copy { width: 100%; max-width: 100%; }
+  .site-header-inner { width: calc(100% - 1.6rem); }
+  .site-title { padding-top: .65rem; }
+  .section-directory a { grid-template-columns: 2rem 1fr; }
+  .section-directory small { display: none; }
+  .page-navigation { grid-template-columns: 1fr; }
+  .page-navigation > div { min-height: 0; border-bottom: 1px solid var(--color-rule); text-align: left !important; }
   .paper-section:first-child { min-height: auto; padding-top: 5rem; }
   .section-marker { display: flex; gap: .65rem; }
   .section-marker span:first-child { margin: 0; }
