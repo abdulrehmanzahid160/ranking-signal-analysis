@@ -1,6 +1,18 @@
 # Work
 
-The `notebooks/` directory contains the capstone notebook and its numbered, reviewable Python modules:
+The `notebooks/` directory consolidates the completed weekly assignment notebooks and the capstone notebook in the repository submitted for review.
+
+## Completed weekly assignments
+
+- `w00_first_readable_model.ipynb` — executed readable-model foundation and deliberate leakage lesson.
+- `w01_research_question.ipynb` — research question and provisional lane.
+- `w02_ml_task_framing.ipynb` — scoring-for-ranking task, proxy, metric, and decision unit.
+- `w03_data_contract.ipynb` — executed warehouse contract, verification queries, five-feature frame, and leakage demonstration.
+- `w04_baseline_score.ipynb` — executed signal checks, transparent baseline, ranked queue receipt, and top-ten review.
+
+## Capstone reproduction
+
+The capstone runner and its numbered, reviewable Python modules are:
 
 - `00_schema_discovery.py` records metadata without exposing sample rows.
 - `01_signal_features_audited.py` streams and aggregates leakage-separated features.

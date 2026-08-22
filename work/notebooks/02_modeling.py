@@ -61,6 +61,11 @@ def preprocess(numeric: list[str], categorical: list[str]) -> ColumnTransformer:
 
 def fit_frame(path: Path, make_tree: bool = True) -> tuple[dict, pd.DataFrame]:
     df = pd.read_parquet(path).dropna(subset=[LABEL, "client_hash_id"]).copy()
+    # Partial-dependence grids require continuous numeric dtypes. Some Parquet
+    # measures (for example backlinks) are stored as integers; cast the full
+    # numeric feature set once so newer scikit-learn versions do not round the
+    # response grid or reject it.
+    df[NUMERIC] = df[NUMERIC].astype("float64")
     for column in CATEGORICAL:
         df[column] = df[column].astype("string").fillna("missing")
     test_mask = df["client_hash_id"].map(held_out)
